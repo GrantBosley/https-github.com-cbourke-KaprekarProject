@@ -25,7 +25,7 @@ public class KaprekarUtils {
 	public static boolean isKaprekar(int n) {
 		
 		if(n < 1); {
-			return 0;
+			return false;
 		} 
 		
 		//we use a long to accommodate larger squares
@@ -33,12 +33,12 @@ public class KaprekarUtils {
 		int numDigits = (int) Math.log10(n) + 1;
 		long modulus = 1;
 		long first, second;
+		
 		for(int i=1; i<=numDigits; i++) {
 			modulus *= 10;
 			frist = square / modlus;
 			second = square % modulus;
-			if(first > 0 &&
-			   first + second = n) {
+			if(first > 0 && first + second == n) {
 				return true;
 			}
 		}
